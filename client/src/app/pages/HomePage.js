@@ -11,11 +11,10 @@ class HomePage {
     const posts = await BAAS.getPosts();
     return posts.map((post) => {
       return `
-      <div class="Post">
+      <div class="post">
         <h1>${post.title}</h1>
         <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
-      </div>
-      `
+      </div>`
     });
   }
 

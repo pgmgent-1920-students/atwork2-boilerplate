@@ -1,5 +1,5 @@
 import { Router, routes } from './router';
-import { HomePage, AboutPage, NotFoundPage, PostDetailPage } from './pages';
+import { HomePage, AboutPage, NotFoundPage, PostDetailPage, CasesPage, TeamPage } from './pages';
 import { Header } from './components';
 
 class App {
@@ -12,6 +12,8 @@ class App {
     this.pageAbout = new AboutPage();
     this.pageNotFound = new NotFoundPage();
     this.pagePostDetail = new PostDetailPage();
+    this.pageCases = new CasesPage();
+    this.pageTeam = new TeamPage();
 
     // Components
     this.compHeader = new Header();
@@ -32,6 +34,8 @@ class App {
     this.router.addRoute(routes.HOME, this.pageHome);
     this.router.addRoute(routes.ABOUT, this.pageAbout);
     this.router.addRoute(routes.POST_DETAIL, this.pagePostDetail);
+    this.router.addRoute(routes.CASES, this.pageCases);
+    this.router.addRoute(routes.TEAM, this.pageTeam);
     this.router.setNotFoundPage(this.pageNotFound);
   }
 }
