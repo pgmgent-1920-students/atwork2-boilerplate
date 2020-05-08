@@ -22,7 +22,9 @@ class App {
   async render () {
     return `
     ${await this.compHeader.render()}
-    <div id="children"></div>
+    <main class="main">
+      <div id="children"></div>
+    </div>    
     `;
   }
 

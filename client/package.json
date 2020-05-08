@@ -6,6 +6,7 @@
   "author": "Philippe De Pauw - Waterschoot",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "navigo": "^7.1.2"
   },
   "devDependencies": {

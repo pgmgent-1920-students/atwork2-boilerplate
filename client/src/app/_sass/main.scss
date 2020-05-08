@@ -1,3 +1,10 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Grid
+@import "node_modules/bootstrap/scss/grid";
+
 $color-blue: #00f;
 
 body {
