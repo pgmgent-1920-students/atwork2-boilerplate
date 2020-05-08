@@ -1,28 +1,24 @@
 import { BAAS } from '../services';
 
-import { routes } from '../router';
-
-class HomePage {
+class PostDetailPage {
   constructor() {
 
   }
 
-  async getPosts () {
-    const posts = await BAAS.getPosts();
-    return posts.map((post) => {
-      return `
-      <div class="Post">
+  async getPost (id) {
+    const post = await BAAS.getPost(id);
+    return `
+      <div class="post">
         <h1>${post.title}</h1>
-        <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
+        <div>${post.synopsis}</div>
       </div>
-      `
-    });
+    `;
   }
 
-  async render () {
+  async render (params) {
     return `
       <div class="page page--home">
-        ${await this.getPosts()}
+        ${await this.getPost(params.id)}
       </div>
     `;
   }
@@ -43,4 +39,4 @@ class HomePage {
   }
 }
 
-export default HomePage;
+export default PostDetailPage;
