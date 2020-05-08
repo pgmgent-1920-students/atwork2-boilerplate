@@ -21,7 +21,9 @@ class HomePage {
   async render () {
     return `
       <div class="page page--home">
-        ${await this.getPosts()}
+        <div class="posts-list">
+          ${await this.getPosts()}
+        </div>
       </div>
     `;
   }
