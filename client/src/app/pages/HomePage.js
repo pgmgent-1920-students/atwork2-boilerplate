@@ -11,7 +11,7 @@ class HomePage {
     const posts = await BAAS.getPosts();
     return posts.map((post) => {
       return `
-      <div class="post">
+      <div class="col-12 col-md-6 col-lg-4 post">
         <h1>${post.title}</h1>
         <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
       </div>`
@@ -21,9 +21,11 @@ class HomePage {
   async render () {
     return `
       <div class="page page--home">
-        <div class="posts-list">
-          ${await this.getPosts()}
-        </div>
+        <div class="container">
+          <div class="row posts-list">
+            ${await this.getPosts()}
+          </div>
+        </div>        
       </div>
     `;
   }

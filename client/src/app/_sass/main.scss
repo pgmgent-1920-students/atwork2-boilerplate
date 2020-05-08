@@ -2,15 +2,32 @@
  * Bootstrap
  *
 */
-// Needed
-@import "node_modules/bootstrap/scss/functions";
-@import "node_modules/bootstrap/scss/variables";
-@import "node_modules/bootstrap/scss/mixins";
 
-// Grid
-@import "node_modules/bootstrap/scss/grid";
+// Needed
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+
+// Custom settings
+$grid-columns:      12;
+$grid-gutter-width: 64px;
+
+// ...
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities/display";
+@import "~bootstrap/scss/utilities/flex";
 
 $color-blue: #00f;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   background: $color-blue;
