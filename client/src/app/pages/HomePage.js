@@ -15,7 +15,7 @@ class HomePage {
         <h1>${post.title}</h1>
         <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
       </div>`
-    });
+    }).join('');
   }
 
   async render () {
