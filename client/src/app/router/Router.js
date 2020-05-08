@@ -27,6 +27,14 @@ class Router {
     )
       .resolve();
   }
+
+  setNotFoundPage (page) {
+    this.router.notFound(
+      async (query) => {
+        this.container.innerHTML = await page.render();
+      }
+    );
+  }
 }
 
 export default Router;

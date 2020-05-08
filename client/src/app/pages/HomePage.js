@@ -1,8 +1,26 @@
+import { BAAS } from '../services';
+
 class HomePage {
+  constructor() {
+
+  }
+
+  async getPosts () {
+    const posts = await BAAS.getPosts();
+    console.log(posts);
+    return posts.map((post) => {
+      return `
+      <div class="Post">
+      ${post.title}
+      </div>
+      `
+    });
+  }
+
   async render () {
     return `
       <div class="page page--home">
-        HOME
+        ${await this.getPosts()}
       </div>
     `;
   }
