@@ -1,18 +1,16 @@
-import {default as Navigo} from 'Navigo';
-
-import * as routes from './routes';
+import Navigo from 'navigo';
 
 class Router {
-  constructor(container) {
+  constructor (container) {
     this.container = container;
     this.router = new Navigo(null, true, '#!');
   }
 
-  addRoute(location, page) {
+  addRoute (location, page) {
     this.router.on(
       location,
       async () => {
-        this.container.innerHTML = await page.render()
+        this.container.innerHTML = await page.render();
       },
       {
         before: async (done, params) => {
@@ -24,10 +22,10 @@ class Router {
         },
         leave: async () => {
           await page.unmount();
-        }
+        },
       }
     )
-    .resolve();
+      .resolve();
   }
 }
 

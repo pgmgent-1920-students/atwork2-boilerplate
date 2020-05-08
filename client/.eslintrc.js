@@ -26,6 +26,7 @@ module.exports = {
         }
     ],
     'no-void': 'off',
+    'import/prefer-default-export': 'off',
     strict: [
       'error', 
       'global'

@@ -12,7 +12,7 @@ class App {
     this.pageAbout = new AboutPage();
 
     // Components
-    this.compHeader = new Header();    
+    this.compHeader = new Header();
   }
 
   async render () {

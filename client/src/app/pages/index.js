@@ -4,4 +4,4 @@ import HomePage from './HomePage';
 export {
   AboutPage,
   HomePage,
-}
+};
