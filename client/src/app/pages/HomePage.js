@@ -12,7 +12,10 @@ class HomePage {
     return posts.map((post) => {
       return `
       <div class="col-12 col-md-6 col-lg-4 post">
-        <h1>${post.title}</h1>
+        <picture class="post__picture">
+          <img src="${post.thumbnailUrl}" />
+        </picture>
+        <h1 class="post__title">${post.title}</h1>
         <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
       </div>`
     }).join('');
