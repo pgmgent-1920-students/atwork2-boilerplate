@@ -1,7 +1,9 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
-import * as webpack from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import ProgressBarPlugin from 'progress-bar-webpack-plugin';
+import chalk from 'chalk';
 
 const config = {
   mode: 'development',
@@ -39,12 +41,50 @@ const config = {
         }
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.s[ac]ss$/,
         use: [
+          'style-loader',
           {
-            loader: 'file-loader'
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development',
+              reloadAll: true,
+            },
+          },
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              sassOptions: {
+                outputStyle: 'compressed',
+              },
+            },
           },
         ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        query: {
+          limit: 10000,
+          name: 'static/images/[name].[hash].[ext]',
+        },
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 1000,
+          name: 'static/fonts/[name].[hash].[ext]',
+        },
+      },
+      {
+        test: /\.(webm|mp4)$/,
+        loader: 'file-loader',
+        options: {
+          name: 'static/videos/[name].[hash].[ext]',
+        },
       },
     ],
   },  
@@ -52,12 +92,19 @@ const config = {
     modules: [path.resolve(__dirname, './src'), 'node_modules']
   },
   plugins: [
-    new webpack.ProgressPlugin(),
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './src/index.html'
-    })    
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[hash].css',
+      chunkFilename: 'css/[id].[hash].css',
+    }),
+    new CleanWebpackPlugin(),    
+    new ProgressBarPlugin({
+      format: `  build [:bar] ${chalk.green.bold(':percent')} (:elapsed seconds)`,
+      clear: false,
+    }),
   ],
 }
 
