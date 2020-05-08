@@ -7,7 +7,6 @@ class HomePage {
 
   async getPosts () {
     const posts = await BAAS.getPosts();
-    console.log(posts);
     return posts.map((post) => {
       return `
       <div class="Post">
