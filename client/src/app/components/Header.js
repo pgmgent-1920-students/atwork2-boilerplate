@@ -1,9 +1,11 @@
+import { routes } from '../router';
+
 class Header {
   async render () {
     return `
       <header class="header">
-        <a href="home" data-navigo>Home</a>
-        <a href="about" data-navigo>About</a>
+        <a href="${routes.HOME}" data-navigo>Home</a>
+        <a href="${routes.ABOUT}" data-navigo>About</a>
       </header>
     `;
   }
