@@ -15,7 +15,8 @@ class AboutPage {
 
   async afterRender () {
     const container = document.querySelector('.page--about .three-container');
-    container.appendChild(this.renderer.domElement);
+    await container.appendChild(this.renderer.domElement);
+
     this.animate();
   }
 
