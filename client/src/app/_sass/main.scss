@@ -20,7 +20,7 @@ $grid-gutter-width: 64px;
 @import "~bootstrap/scss/utilities/display";
 @import "~bootstrap/scss/utilities/flex";
 
-$color-blue: #00f;
+$color-white: #fff;
 
 * {
   box-sizing: border-box;
@@ -32,7 +32,7 @@ html, body {
 }
 
 body {
-  background: $color-blue;
+  background: $color-white;
 }
 
 /*
