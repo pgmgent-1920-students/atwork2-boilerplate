@@ -9,16 +9,14 @@ class Router {
   addRoute (location, page) {
     this.router.on(
       location,
-      async (params) => {
+      async (params) => {        
         this.container.innerHTML = await page.render(params);
+        await page.afterRender();
       },
       {
         before: async (done, params) => {
           await page.mount();
           done();
-        },
-        after: async (params) => {
-          await page.afterRender();
         },
         leave: async () => {
           await page.unmount();
