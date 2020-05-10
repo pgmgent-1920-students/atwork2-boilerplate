@@ -1,10 +1,6 @@
 import { BAAS } from '../services';
 
 class PostDetailPage {
-  constructor() {
-
-  }
-
   async getPost (id) {
     const post = await BAAS.getPost(id);
     return `

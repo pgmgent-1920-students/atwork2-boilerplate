@@ -1,5 +1,7 @@
 import { Router, routes } from './router';
-import { HomePage, AboutPage, NotFoundPage, PostDetailPage, CasesPage, TeamPage } from './pages';
+import {
+  HomePage, AboutPage, NotFoundPage, PostDetailPage, CasesPage, TeamPage,
+} from './pages';
 import { Header } from './components';
 
 class App {

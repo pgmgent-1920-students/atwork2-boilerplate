@@ -3,22 +3,16 @@ import { BAAS } from '../services';
 import { routes } from '../router';
 
 class HomePage {
-  constructor() {
-
-  }
-
   async getPosts () {
     const posts = await BAAS.getPosts();
-    return posts.map((post) => {
-      return `
+    return posts.map(post => `
       <div class="col-12 col-md-6 col-lg-4 post">
         <picture class="post__picture">
           <img src="${post.thumbnailUrl}" />
         </picture>
         <h1 class="post__title">${post.title}</h1>
         <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
-      </div>`
-    }).join('');
+      </div>`).join('');
   }
 
   async render () {

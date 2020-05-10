@@ -9,7 +9,7 @@ class Router {
   addRoute (location, page) {
     this.router.on(
       location,
-      async (params) => {        
+      async (params) => {
         this.container.innerHTML = await page.render(params);
         await page.afterRender();
       },

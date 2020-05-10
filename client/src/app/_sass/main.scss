@@ -20,7 +20,9 @@ $grid-gutter-width: 64px;
 @import "~bootstrap/scss/utilities/display";
 @import "~bootstrap/scss/utilities/flex";
 
-$color-white: #fff;
+// My Own Styling
+@import "abstracts/index";
+
 
 * {
   box-sizing: border-box;

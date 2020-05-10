@@ -15,6 +15,7 @@ module.exports = {
       'error', 
       'always-multiline'
     ],
+    'class-methods-use-this': 'off',
     'linebreak-style': 'off',
     'no-console': 'off',
     'no-plusplus': 'off',
@@ -32,4 +33,7 @@ module.exports = {
       'global'
     ],
   },
+  globals: {
+    fetch: false
+  }
 };
