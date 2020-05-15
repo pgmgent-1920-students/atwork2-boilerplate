@@ -141,14 +141,14 @@ eval("module.exports = __webpack_require__(/*! regenerator-runtime */ \"./node_m
 
 /***/ }),
 
-/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js?!./src/app/_sass/main.scss":
-/*!****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-1!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./src/app/_sass/main.scss ***!
-  \****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/app/_sass/main.scss":
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-1!./node_modules/css-loader/dist/cjs.js??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3!./src/app/_sass/main.scss ***!
+  \**************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/app/_sass/main.scss?./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-1!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ref--6-3");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/app/_sass/main.scss?./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-1!./node_modules/css-loader/dist/cjs.js??ref--6-2!./node_modules/sass-loader/dist/cjs.js??ref--6-3");
 
 /***/ }),
 
@@ -217,7 +217,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _bab
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-1!../../../node_modules/css-loader/dist/cjs.js!../../../node_modules/sass-loader/dist/cjs.js??ref--6-3!./main.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js?!./src/app/_sass/main.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack:///./src/app/_sass/main.scss?");
+eval("var api = __webpack_require__(/*! ../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n            var content = __webpack_require__(/*! !../../../node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-1!../../../node_modules/css-loader/dist/cjs.js??ref--6-2!../../../node_modules/sass-loader/dist/cjs.js??ref--6-3!./main.scss */ \"./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/dist/cjs.js?!./src/app/_sass/main.scss\");\n\n            content = content.__esModule ? content.default : content;\n\n            if (typeof content === 'string') {\n              content = [[module.i, content, '']];\n            }\n\nvar options = {};\n\noptions.insert = \"head\";\noptions.singleton = false;\n\nvar update = api(content, options);\n\n\n\nmodule.exports = content.locals || {};\n\n//# sourceURL=webpack:///./src/app/_sass/main.scss?");
 
 /***/ }),
 
