@@ -62,6 +62,7 @@ const config = {
               importLoaders: 2,
             } 
           }, 
+          'resolve-url-loader',
           {
             loader: 'sass-loader',
             options: {
