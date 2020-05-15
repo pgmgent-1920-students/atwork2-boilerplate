@@ -8,12 +8,15 @@ import chalk from 'chalk';
 const config = {
   mode: 'development',
   devServer: {
-    contentBase: './dist'
+    port: process.env.PORT || 8080,
+    contentBase: './src',
+    historyApiFallback: false,
   }, 
   entry: './src/index.js',
   output: {
-    chunkFilename: 'js/[name].chunk.js',
-    path: path.resolve(__dirname, 'dist')
+    filename: 'js/[name].[hash].js',
+    chunkFilename: 'js/[id].[hash].js',
+    path: path.resolve(__dirname, './dist'),
   },
   module: {
     rules: [
@@ -49,15 +52,24 @@ const config = {
             options: {
               hmr: process.env.NODE_ENV === 'development',
               reloadAll: true,
+              publicPath: '../',
             },
           },
-          'css-loader',
+          { 
+            loader: 'css-loader', 
+            options: { 
+              url: true,
+              importLoaders: 2,
+            } 
+          }, 
           {
             loader: 'sass-loader',
             options: {
               sourceMap: true,
               sassOptions: {
                 outputStyle: 'compressed',
+                sourceMap: true,
+                sourceMapContents: false,
               },
             },
           },
@@ -68,7 +80,7 @@ const config = {
         loader: 'url-loader',
         query: {
           limit: 10000,
-          name: 'static/images/[name].[hash].[ext]',
+          name: './static/images/[name].[hash].[ext]',
         },
       },
       {
@@ -76,14 +88,14 @@ const config = {
         loader: 'url-loader',
         options: {
           limit: 1000,
-          name: 'static/fonts/[name].[hash].[ext]',
+          name: './static/fonts/[name].[hash].[ext]',
         },
       },
       {
         test: /\.(webm|mp4)$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
-          name: 'static/videos/[name].[hash].[ext]',
+          name: './static/videos/[name].[hash].[ext]',
         },
       },
     ],

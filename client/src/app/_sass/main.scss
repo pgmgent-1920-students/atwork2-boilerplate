@@ -21,7 +21,7 @@ $grid-gutter-width: 64px;
 @import "~bootstrap/scss/utilities/flex";
 
 // My Own Styling
-@import "abstracts/index";
+@import "./abstracts/index";
 
 
 * {
@@ -34,7 +34,7 @@ html, body {
 }
 
 body {
-  background: url(../_static/images/Wavey-Fingerprint.svg) repeat center center;
+  background: url("../_static/images/covid.jpg") repeat center center;
 }
 
 /*
