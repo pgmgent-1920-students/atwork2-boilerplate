@@ -19,6 +19,7 @@ class HomePage {
     return `
       <div class="page page--home">
         <div class="container">
+          <span class="btn">Activate</span>
           <div class="row posts-list">
             ${await this.getPosts()}
           </div>
@@ -28,6 +29,10 @@ class HomePage {
   }
 
   async afterRender () {
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click', (ev) => {
+      console.log(ev);
+    });
     // Connect the listeners
     return this;
   }

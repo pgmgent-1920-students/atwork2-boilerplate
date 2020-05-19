@@ -31,6 +31,8 @@ class App {
   }
 
   async afterRender () {
+    await this.compHeader.afterRender();
+
     this.childrenContainer = document.getElementById('children');
     // Router
     this.router = new Router(this.childrenContainer);
@@ -40,7 +42,7 @@ class App {
     this.router.addRoute(routes.POST_DETAIL, this.pagePostDetail);
     this.router.addRoute(routes.CASES, this.pageCases);
     this.router.addRoute(routes.TEAM, this.pageTeam);
-    this.router.setNotFoundPage(this.pageNotFound);
+    this.router.setNotFoundPage(this.pageNotFound);   
   }
 }
 
