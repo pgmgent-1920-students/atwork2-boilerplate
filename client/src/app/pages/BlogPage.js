@@ -1,16 +1,14 @@
-class AboutPage {
-  constructor () {
-  }
-
+class BlogPage {
   async render () {
     return `
-      <div class="page page--about">
+      <div class="page page--blog">
+        <h1>BLOG<h1>
       </div>
     `;
   }
 
   async afterRender () {
-    // Before the rendering of the page
+    // Connect the listeners
     return this;
   }
 
@@ -25,4 +23,4 @@ class AboutPage {
   }
 }
 
-export default AboutPage;
+export default BlogPage;

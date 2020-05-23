@@ -11,6 +11,7 @@ class Header {
             <a href="${routes.CASES}" data-navigo>Cases</a>
             <a href="${routes.TEAM}" data-navigo>Team</a>
             <a href="${routes.ABOUT}" data-navigo>About</a>
+            <a href="${routes.CONTACT}" data-navigo>Contact</a>
           </div>
         </div>        
       </header>

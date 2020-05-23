@@ -1,8 +1,8 @@
 import { Router, routes } from './router';
 import {
-  HomePage, AboutPage, NotFoundPage, PostDetailPage, CasesPage, TeamPage,
+  HomePage, AboutPage, NotFoundPage, PostDetailPage, CasesPage, TeamPage, ContactPage, BlogPage,
 } from './pages';
-import { Header } from './components';
+import { Footer, Header } from './components';
 
 class App {
   constructor (container) {
@@ -12,13 +12,16 @@ class App {
     // Pages
     this.pageHome = new HomePage();
     this.pageAbout = new AboutPage();
-    this.pageNotFound = new NotFoundPage();
-    this.pagePostDetail = new PostDetailPage();
+    this.pageBlog = new BlogPage();
     this.pageCases = new CasesPage();
+    this.pageContact = new ContactPage();
+    this.pageNotFound = new NotFoundPage();
+    this.pagePostDetail = new PostDetailPage();    
     this.pageTeam = new TeamPage();
 
     // Components
     this.compHeader = new Header();
+    this.compFooter = new Footer();
   }
 
   async render () {
@@ -26,23 +29,28 @@ class App {
     ${await this.compHeader.render()}
     <main class="main">
       <div id="children"></div>
-    </div>    
+    </div> 
+    ${await this.compFooter.render()}   
     `;
   }
 
   async afterRender () {
-    await this.compHeader.afterRender();
-
     this.childrenContainer = document.getElementById('children');
     // Router
     this.router = new Router(this.childrenContainer);
     this.router.addRoute(routes.LANDING, this.pageHome);
     this.router.addRoute(routes.HOME, this.pageHome);
     this.router.addRoute(routes.ABOUT, this.pageAbout);
+    this.router.addRoute(routes.BLOG, this.pageBlog);
     this.router.addRoute(routes.POST_DETAIL, this.pagePostDetail);
-    this.router.addRoute(routes.CASES, this.pageCases);
+    this.router.addRoute(routes.CASES, this.pageCases);    
     this.router.addRoute(routes.TEAM, this.pageTeam);
+    this.router.addRoute(routes.CONTACT, this.pageContact);
     this.router.setNotFoundPage(this.pageNotFound);   
+
+    // Register components afterRender methods
+    await this.compHeader.afterRender();
+    await this.compFooter.afterRender();
   }
 }
 
