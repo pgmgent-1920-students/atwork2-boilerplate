@@ -31,6 +31,12 @@ class Footer {
             <div class="col-12">
               <section class="footer-section">
                 <h1 class="hidden footer-section__title">Terms</h1>
+                <p>Copyright &copy; ${new Date().getUTCFullYear()} gdm.gent.</p>
+                <p>
+                  <a href="https://www.arteveldehogeschool.be/disclaimer" target="_blank">Disclaimer</a>
+                  <a href="https://www.arteveldehogeschool.be/cookiebeleid" target="_blank">Cookiebeleid</a>
+                  <a href="https://www.arteveldehogeschool.be/privacybeleid" target="_blank">Privacybeleid</a>
+                </p>
               </section>
             </div>
           </div>
