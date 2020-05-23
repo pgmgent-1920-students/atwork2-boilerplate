@@ -1,0 +1,17 @@
+@mixin generateSectionColor($colorName, $color-variable) {  
+  &--#{$colorName} {
+    & .section {
+      &__title {
+        & mark {
+          color: $color-variable;
+        }
+      }
+  
+      &__intro {
+        & strong {
+          color: $color-variable;
+        }
+      }
+    }    
+  }
+}

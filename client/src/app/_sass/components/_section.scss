@@ -21,19 +21,10 @@
     }
   }
 
-  &--green {
-    & .section {
-      &__title {
-        & mark {
-          color: $color-green;
-        }
-      }
-  
-      &__intro {
-        & strong {
-          color: $color-green;
-        }
-      }
-    }    
-  }
+  @include generateSectionColor('purple', $color-purple);
+  @include generateSectionColor('blue', $color-blue);
+  @include generateSectionColor('green', $color-green);
+  @include generateSectionColor('red', $color-red);
+  @include generateSectionColor('orange', $color-orange);
+
 }

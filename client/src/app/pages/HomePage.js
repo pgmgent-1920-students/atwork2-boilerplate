@@ -14,7 +14,7 @@ class HomePage {
           <span class="btn">Activate</span>
           ${await this.compPostsList.render()}
         </div>
-        <section class="section section--green">
+        <section class="section section--red">
           <div class="container">
             <header class="section__header">
               <h1 class="section__title">
@@ -38,7 +38,7 @@ class HomePage {
             </header>
           </div> 
         </section> 
-        <section class="section section--green">
+        <section class="section section--blue">
           <div class="container">
             <header class="section__header">
               <h1 class="section__title">
