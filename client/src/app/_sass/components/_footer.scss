@@ -17,10 +17,10 @@
       font-weight: 500;
 
       & > a {
-        color: darken($color: $color-white, $amount: 20);
+        color: darken($color: $color-white, $amount: 32);
         text-decoration: none;
 
-        transition: all 286ms ease-in-out 0s;
+        transition: all 686ms ease-in-out 0s;
 
         &:hover {
           color: lighten($color-blue, 10);

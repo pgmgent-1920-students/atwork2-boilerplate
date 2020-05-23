@@ -19,6 +19,25 @@ class Footer {
                 </ul>
               </section>
             </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <section class="footer-section">
+                <h1 class="footer-section__title">Afstudeerrichtingen</h1>
+                <ul class="footer-section__list">
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/crossmedia-ontwerp" target="_blank">Crossmedia-ontwerp</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafimediabeleid" target="_blank">Grafimediabeleid</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/new-media-development-multimediaproductie" target="_blank">New Media Development</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/audiovisual-design-multimediaproductie" target="_blank">Audiovisual Design</a></li>
+                </ul>
+              </section>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+              <section class="footer-section">
+                <h1 class="footer-section__title">Algemeen</h1>
+                <ul class="footer-section__list">
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media" target="_blank">GDM</a></li>
+                </ul>
+              </section>
+            </div>
           </div>
           <div class="row">
             <div class="col-12">
