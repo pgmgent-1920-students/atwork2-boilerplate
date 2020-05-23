@@ -4,15 +4,24 @@ class Header {
   async render () {
     return `
       <header class="header">
-        <div class="btn-hamburger">HAMB</div>
+        <div class="header__hamburger">HAMB</div>
         <div class="container">
           <div class="row">
-            <a href="${routes.HOME}" data-navigo>Home</a>
-            <a href="${routes.CASES}" data-navigo>Cases</a>
-            <a href="${routes.TEAM}" data-navigo>Team</a>
-            <a href="${routes.ABOUT}" data-navigo>About</a>
-            <a href="${routes.BLOG}" data-navigo>Blog</a>
-            <a href="${routes.CONTACT}" data-navigo>Contact</a>
+            <div class="col-12">
+            <div class="brand">
+
+            </div>
+              <nav class="nav">
+                <ul class="nav__list">
+                  <li class="nav__item"><a href="${routes.HOME}" data-navigo>Home</a></li>
+                  <li class="nav__item"><a href="${routes.ABOUT}" data-navigo>About</a></li>
+                  <li class="nav__item"><a href="${routes.BLOG}" data-navigo>Blog</a></li>
+                  <li class="nav__item"><a href="${routes.CASES}" data-navigo>Cases</a></li>
+                  <li class="nav__item"><a href="${routes.TEAM}" data-navigo>Team</a></li> 
+                  <li class="nav__item"><a href="${routes.CONTACT}" data-navigo>Contact</a></li>
+                </ul>
+              </nav>
+            </div>                        
           </div>
         </div>        
       </header>

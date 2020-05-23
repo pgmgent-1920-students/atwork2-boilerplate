@@ -1,0 +1,39 @@
+.section {
+  &__title {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+
+    & mark {
+      background: transparent;
+      color: $color-blue;
+    }
+  }
+
+  &__intro {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.42;
+
+    & strong {
+      background: transparent;
+      color: $color-blue;
+    }
+  }
+
+  &--green {
+    & .section {
+      &__title {
+        & mark {
+          color: $color-green;
+        }
+      }
+  
+      &__intro {
+        & strong {
+          color: $color-green;
+        }
+      }
+    }    
+  }
+}
