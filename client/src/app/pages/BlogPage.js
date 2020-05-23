@@ -1,8 +1,17 @@
+import { PostsList } from '../components';
+
 class BlogPage {
+  constructor () {
+    this.compPostsList = new PostsList(6);
+  }
+
   async render () {
     return `
       <div class="page page--blog">
-        <h1>BLOG<h1>
+        <h1>BLOG</h1>
+        <div class="container">
+          ${await this.compPostsList.render()}
+        </div>  
       </div>
     `;
   }

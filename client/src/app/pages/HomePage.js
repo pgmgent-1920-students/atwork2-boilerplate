@@ -1,18 +1,10 @@
-import { BAAS } from '../services';
-
 import { routes } from '../router';
 
+import { PostsList } from '../components';
+
 class HomePage {
-  async getPosts () {
-    const posts = await BAAS.getPosts();
-    return posts.map(post => `
-      <div class="col-12 col-md-6 col-lg-4 post">
-        <picture class="post__picture">
-          <img src="${post.thumbnailUrl}" />
-        </picture>
-        <h1 class="post__title">${post.title}</h1>
-        <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
-      </div>`).join('');
+  constructor () {
+    this.compPostsList = new PostsList(3);
   }
 
   async render () {
@@ -20,9 +12,7 @@ class HomePage {
       <div class="page page--home">
         <div class="container">
           <span class="btn">Activate</span>
-          <div class="row posts-list">
-            ${await this.getPosts()}
-          </div>
+          ${await this.compPostsList.render()}
         </div>        
       </div>
     `;
@@ -33,6 +23,10 @@ class HomePage {
     btn.addEventListener('click', (ev) => {
       console.log(ev);
     });
+
+    // afterRender all components on the page
+    this.compPostsList.afterRender();
+
     // Connect the listeners
     return this;
   }
