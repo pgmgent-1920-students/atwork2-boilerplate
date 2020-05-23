@@ -34,7 +34,12 @@ class Footer {
               <section class="footer-section">
                 <h1 class="footer-section__title">Algemeen</h1>
                 <ul class="footer-section__list">
-                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media" target="_blank">GDM</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/hoe-ziet-je-opleiding-eruit" target="_blank">Hoe ziet de opleiding eruit?</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/waarvoor-kies-je" target="_blank">Waarvoor kies je?</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/wat-zal-je-leren-0" target="_blank">Wat zal je leren?</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/wat-na-je-opleiding-0" target="_blank">Wat na je opleiding?</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/praktische-info-en-veel-gestelde-vragen" target="_blank">Praktische info en veel gestelde vragen</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/starten-februari" target="_blank">Starten in februari</a></li>
                 </ul>
               </section>
             </div>
