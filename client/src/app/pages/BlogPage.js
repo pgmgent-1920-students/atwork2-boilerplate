@@ -17,6 +17,9 @@ class BlogPage {
   }
 
   async afterRender () {
+    // afterRender all components on the page
+    this.compPostsList.afterRender();
+    
     // Connect the listeners
     return this;
   }
