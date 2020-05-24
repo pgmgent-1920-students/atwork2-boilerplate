@@ -16,11 +16,11 @@ class CasesList {
       <div class="col-12 col-md-6 col-lg-4">
         <div class="card card--${color} cases-list__item">
           <picture class="card__picture picture">
-            <img src="${project.Picture}" />
+            <img src="${project.picture}" />
           </picture>
-          <h1 class="card__sub-title sub-title">${project.Course ? project.Course : 'Generic'}</h1>
-          <h1 class="card__title title">${project.Title}</h1>
-          <a class="card__readmore" href="#!${routes.CASE_DETAIL.replace(':id', project.Id)}">Read more</a>
+          <h1 class="card__sub-title sub-title">${project.course ? project.course : 'Not specified'}</h1>
+          <h1 class="card__title title">${project.title}</h1>
+          <a class="card__readmore" href="#!${routes.CASE_DETAIL.replace(':id', project.id)}">Read more</a>
         </div>
       </div>`).join('');
   }

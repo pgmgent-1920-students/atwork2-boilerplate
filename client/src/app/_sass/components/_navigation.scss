@@ -23,6 +23,7 @@
     font-weight: 600;
 
     & > a {
+      outline: none;
       padding: 0 ($spacer*3) 1px;
       text-decoration: none;
       color: darken($color-white, 30);
@@ -30,6 +31,10 @@
       transition: all 286ms ease-in-out 0s;
 
       &:hover {
+        color: $color-white;
+      }
+
+      &.active {
         color: $color-white;
       }
     }

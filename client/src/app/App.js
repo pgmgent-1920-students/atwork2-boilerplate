@@ -21,7 +21,7 @@ class App {
 
     // Components
     this.compHeader = new Header();
-    this.compFooter = new Footer();
+    this.compFooter = new Footer();    
   }
 
   async render () {
@@ -53,6 +53,17 @@ class App {
     // Register components afterRender methods
     await this.compHeader.afterRender();
     await this.compFooter.afterRender();
+
+    // Listen to changes in History
+    window.onpopstate = (event) => {
+      this.setActiveLink();
+    }
+    // Set active link
+    this.setActiveLink();
+  }
+
+  setActiveLink () {
+    this.compHeader.updateActiveLink(document.location.hash);
   }
 }
 

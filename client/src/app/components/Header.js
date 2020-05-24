@@ -8,9 +8,8 @@ class Header {
         <div class="container">
           <div class="row">
             <div class="col-12">
-            <div class="brand">
-
-            </div>
+              <div class="brand">
+              </div>
               <nav class="nav">
                 <ul class="nav__list">
                   <li class="nav__item"><a href="${routes.HOME}" data-navigo>Home</a></li>
@@ -21,6 +20,7 @@ class Header {
                   <li class="nav__item"><a href="${routes.CONTACT}" data-navigo>Contact</a></li>
                 </ul>
               </nav>
+              <div class="btn-hamburger"><i class="fas fa-bars"></i></div>
             </div>                        
           </div>
         </div>        
@@ -35,6 +35,18 @@ class Header {
       console.log(ev);
     });
     return this;
+  }
+
+  updateActiveLink (route) {
+    const prevActiveMenuItemElement = document.querySelector(`.nav__item > a[class*="active"]`);
+    if (prevActiveMenuItemElement) {
+      prevActiveMenuItemElement.classList.remove('active');
+    }
+    const link = route.replace('#!', '');
+    const menuItemElement = document.querySelector(`.nav__item > a[href*="${link}"]`);
+    if (menuItemElement) {
+      menuItemElement.classList.add('active');
+    }    
   }
 }
 
