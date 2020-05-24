@@ -2,6 +2,16 @@
   background: lighten($color: $color-black, $amount: 14);
   box-shadow: lighten($color: $color-black, $amount: 20) 0px -1px;
 
+  padding: $grid-gutter-width;
+
+  & > .container > .row {
+    margin-bottom: $grid-gutter-width;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
   &-section {
     &__title {
       font-size: 1.2rem;
@@ -15,17 +25,41 @@
 
     &__item {
       font-weight: 500;
+      padding: $spacer/4 0;
 
       & > a {
         color: darken($color: $color-white, $amount: 32);
         text-decoration: none;
 
-        transition: all 686ms ease-in-out 0s;
+        transition: all 486ms ease-in-out 0s;
 
         &:hover {
           color: lighten($color-blue, 10);
         }
       }
+    }
+
+    &--terms {
+      & p {
+        margin: 0 0 $spacer;
+
+        &:last-of-type {
+          & > a {
+            padding: 0 $spacer;
+          }
+        }
+      }
+    }
+  }
+
+  & a {
+    color: darken($color: $color-white, $amount: 32);
+    text-decoration: none;
+
+    transition: all 486ms ease-in-out 0s;
+
+    &:hover {
+      color: lighten($color-blue, 10);
     }
   }
 }

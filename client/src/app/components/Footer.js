@@ -6,7 +6,7 @@ class Footer {
       <footer class="footer">
         <div class="container">
           <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="col-12 col-md-6 col-xl-3">
               <section class="footer-section">
                 <h1 class="footer-section__title">gdm.gent</h1>
                 <ul class="footer-section__list">
@@ -18,8 +18,21 @@ class Footer {
                   <li class="footer-section__item"><a href="${routes.CONTACT}" data-navigo>Contact</a></li>
                 </ul>
               </section>
+            </div>            
+            <div class="col-12 col-md-6 col-xl-3">
+              <section class="footer-section">
+                <h1 class="footer-section__title">Algemeen</h1>
+                <ul class="footer-section__list">
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/hoe-ziet-je-opleiding-eruit" target="_blank">Hoe ziet de opleiding eruit?</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/waarvoor-kies-je" target="_blank">Waarvoor kies je?</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/wat-zal-je-leren-0" target="_blank">Wat zal je leren?</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/wat-na-je-opleiding-0" target="_blank">Wat na je opleiding?</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/praktische-info-en-veel-gestelde-vragen" target="_blank">Praktische info</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/starten-februari" target="_blank">Starten in februari</a></li>
+                </ul>
+              </section>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="col-12 col-md-6 col-xl-3">
               <section class="footer-section">
                 <h1 class="footer-section__title">Afstudeerrichtingen</h1>
                 <ul class="footer-section__list">
@@ -30,16 +43,14 @@ class Footer {
                 </ul>
               </section>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="col-12 col-md-6 col-xl-3">
               <section class="footer-section">
-                <h1 class="footer-section__title">Algemeen</h1>
+                <h1 class="footer-section__title">Gerelateerde opleidingen</h1>
                 <ul class="footer-section__list">
-                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/hoe-ziet-je-opleiding-eruit" target="_blank">Hoe ziet de opleiding eruit?</a></li>
-                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/waarvoor-kies-je" target="_blank">Waarvoor kies je?</a></li>
-                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/wat-zal-je-leren-0" target="_blank">Wat zal je leren?</a></li>
-                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/wat-na-je-opleiding-0" target="_blank">Wat na je opleiding?</a></li>
-                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/praktische-info-en-veel-gestelde-vragen" target="_blank">Praktische info en veel gestelde vragen</a></li>
-                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/grafische-en-digitale-media/starten-februari" target="_blank">Starten in februari</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/graduaat/programmeren" target="_blank">Graduaat Programmeren</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bachelor/international-graphic-and-digital-media" target="_blank">International Graphic and Digital Media</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/postgraduaat/experience-architect" target="_blank">Experience Architect</a></li>
+                  <li class="footer-section__item"><a href="https://www.arteveldehogeschool.be/opleidingen/bijscholingen-en-studiedagen/masterclasses-3d-modeling-printing" target="_blank">Masterclasses 3D modeling & printing</a></li>
                 </ul>
               </section>
             </div>
@@ -53,7 +64,7 @@ class Footer {
           </div>
           <div class="row">
             <div class="col-12">
-              <section class="footer-section">
+              <section class="footer-section footer-section--terms d-flex flex-column justify-content-center align-items-center">
                 <h1 class="hidden footer-section__title">Terms</h1>
                 <p>Copyright &copy; ${new Date().getUTCFullYear()} gdm.gent.</p>
                 <p>
