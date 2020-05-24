@@ -13,12 +13,14 @@ class PostsList {
       posts = posts.slice(0, this.n);
     }
     return posts.map(post => `
-      <div class="col-12 col-md-6 col-lg-4 post">
-        <picture class="post__picture">
-          <img src="${post.thumbnailUrl}" />
-        </picture>
-        <h1 class="post__title">${post.title}</h1>
-        <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card post">
+          <picture class="card__picture post__picture">
+            <img src="${post.thumbnailUrl}" />
+          </picture>
+          <h1 class="card__title post__title">${post.title}</h1>
+          <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
+        </div>
       </div>`).join('');
   }
 

@@ -10,10 +10,6 @@ class HomePage {
   async render () {
     return `
       <div class="page page--home">
-        <div class="container">
-          <span class="btn">Activate</span>
-          ${await this.compPostsList.render()}
-        </div>
         <section class="section section--red">
           <div class="container">
             <header class="section__header">
@@ -29,18 +25,27 @@ class HomePage {
         <section class="section section--green">
           <div class="container">
             <header class="section__header">
-              <h1 class="section__title">
-                You can read,<br> <mark>news <br> about us <br> and programming</mark>
-              </h1>
-              <p class="section__intro"">
-                Lees over activiteiten waaraan we deelnemen maar die we ook zelf organiseren. Internationale samenwerkingen, tentoonstellingen, studenten die wedstrijden winnen ... . <strong>Onze studenten zitten niet stil</strong>!
-              </p>
+              <div class="row">
+                <div class="col-12">
+                  <h1 class="section__title">
+                  You can read,<br> <mark>news <br> about us <br> and programming</mark>
+                  </h1>
+                </div>
+                <div class="col-12">
+                  <p class="section__intro"">
+                  Lees over activiteiten waaraan we deelnemen maar die we ook zelf organiseren. Internationale samenwerkingen, tentoonstellingen, studenten die wedstrijden winnen ... . <strong>Onze studenten zitten niet stil</strong>!
+                  </p>
+                </div>
+              </div>
             </header>
+            <div class="section__body">
+              ${await this.compPostsList.render()}
+            </div>
           </div> 
         </section> 
         <section class="section section--blue">
           <div class="container">
-            <header class="section__header">
+            <header class="row section__header">
               <h1 class="section__title">
                 You can see,<br> <mark>cases <br>made by<br>our students</mark>
               </h1>
@@ -55,11 +60,6 @@ class HomePage {
   }
 
   async afterRender () {
-    const btn = document.querySelector('.btn');
-    btn.addEventListener('click', (ev) => {
-      console.log(ev);
-    });
-
     // afterRender all components on the page
     this.compPostsList.afterRender();
 

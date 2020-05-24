@@ -36,6 +36,7 @@ class App {
 
   async afterRender () {
     this.childrenContainer = document.getElementById('children');
+    
     // Router
     this.router = new Router(this.childrenContainer);
     this.router.addRoute(routes.LANDING, this.pageHome);
@@ -46,7 +47,8 @@ class App {
     this.router.addRoute(routes.CASES, this.pageCases);    
     this.router.addRoute(routes.TEAM, this.pageTeam);
     this.router.addRoute(routes.CONTACT, this.pageContact);
-    this.router.setNotFoundPage(this.pageNotFound);   
+    this.router.setNotFoundPage(this.pageNotFound); 
+    this.router.resolve();
 
     // Register components afterRender methods
     await this.compHeader.afterRender();
