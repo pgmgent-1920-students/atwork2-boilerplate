@@ -1,10 +1,11 @@
 import { routes } from '../router';
 
-import { PostsList } from '../components';
+import { CasesList, PostsList } from '../components';
 
 class HomePage {
   constructor () {
     this.compPostsList = new PostsList(3);
+    this.compCasesList = new CasesList(6);
   }
 
   async render () {
@@ -65,6 +66,9 @@ class HomePage {
                 </div>
               </div>
             </header>
+            <div class="section__body">
+              ${await this.compCasesList.render('blue')}
+            </div>
           </div> 
         </section>     
       </div>
