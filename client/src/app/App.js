@@ -54,7 +54,7 @@ class App {
     await this.compHeader.afterRender();
     await this.compFooter.afterRender();
 
-    // Listen to changes in History
+    // Listen to changes in history
     window.onpopstate = (event) => {
       this.setActiveLink();
     }
