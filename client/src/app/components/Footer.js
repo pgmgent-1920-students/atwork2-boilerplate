@@ -59,6 +59,13 @@ class Footer {
             <div class="col-12">
               <section class="footer-section">
                 <h1 class="hidden footer-section__title">Social media</h1>
+                <p>
+                  <a href="https://www.facebook.com/GrafischeendigitalemediaArteveldehogeschool/" target="_blank"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/madebygdm/" target="_blank"><i class="fab fa-instagram"></i></a>
+                  <a href="https://twitter.com/arteveldegdm" target="_blank"><i class="fab fa-twitter"></i></a>
+                  <a href="https://www.youtube.com/channel/UC19xkV3NDwoYlwjr4UvNwhg" target="_blank"><i class="fab fa-youtube"></i></a>
+                  <a href="https://github.com/gdmgent" target="_blank"><i class="fab fa-github"></i></a>
+                </p>
               </section>
             </div>
           </div>
