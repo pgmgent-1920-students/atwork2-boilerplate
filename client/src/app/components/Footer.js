@@ -57,9 +57,9 @@ class Footer {
           </div>
           <div class="row">
             <div class="col-12">
-              <section class="footer-section">
+              <section class="footer-section footer-section--social">
                 <h1 class="hidden footer-section__title">Social media</h1>
-                <p>
+                <p class="text-center">
                   <a href="https://www.facebook.com/GrafischeendigitalemediaArteveldehogeschool/" target="_blank"><i class="fab fa-facebook"></i></a>
                   <a href="https://www.instagram.com/madebygdm/" target="_blank"><i class="fab fa-instagram"></i></a>
                   <a href="https://twitter.com/arteveldegdm" target="_blank"><i class="fab fa-twitter"></i></a>

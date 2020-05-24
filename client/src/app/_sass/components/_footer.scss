@@ -50,6 +50,16 @@
         }
       }
     }
+
+    &--social {
+      & a {
+        padding: 0 $spacer;
+      }
+
+      & .fab {
+        font-size: 1.6rem;
+      }
+    }
   }
 
   & a {
