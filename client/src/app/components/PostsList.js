@@ -7,27 +7,28 @@ class PostsList {
     this.n = n;
   }
 
-  async getPosts () {
+  async getPosts (color) {
     let posts = await BAAS.getPosts();
     if (this.n !== null) {
       posts = posts.slice(0, this.n);
     }
     return posts.map(post => `
       <div class="col-12 col-md-6 col-lg-4">
-        <div class="card post">
-          <picture class="card__picture post__picture">
+        <div class="card card--${color} posts-list__item">
+          <picture class="card__picture picture">
             <img src="${post.thumbnailUrl}" />
           </picture>
-          <h1 class="card__title post__title">${post.title}</h1>
-          <a href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Details</a>
+          <h1 class="card__sub-title sub-title">${post.category ? post.category : 'News'}</h1>
+          <h1 class="card__title title">${post.title}</h1>
+          <a class="card__readmore" href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Read more</a>
         </div>
       </div>`).join('');
   }
 
-  async render () {
+  async render (color) {
     return `
       <div class="row posts-list">
-        ${await this.getPosts()}     
+        ${await this.getPosts(color)}     
       </div>
     `;
   }

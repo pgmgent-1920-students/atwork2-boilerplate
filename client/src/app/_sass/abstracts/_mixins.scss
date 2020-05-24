@@ -15,3 +15,21 @@
     }    
   }
 }
+
+@mixin generateCardColor($colorName, $color-variable) {  
+  &--#{$colorName} {
+    & .card {
+      &__sub-title {
+        color: $color-variable;
+      }
+
+      &__readmore {
+        color: $color-variable;
+    
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }    
+  }
+}
