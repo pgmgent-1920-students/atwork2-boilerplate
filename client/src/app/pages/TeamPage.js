@@ -2,7 +2,7 @@ class TeamPage {
   async render () {
     return `
       <div class="page page--team">
-        TEAM
+        <h1>Team</h1>
       </div>
     `;
   }

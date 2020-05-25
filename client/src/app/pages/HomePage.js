@@ -1,11 +1,10 @@
 import { routes } from '../router';
 
-import { CasesList, PostsList } from '../components';
+import { PostsList } from '../components';
 
 class HomePage {
   constructor () {
     this.compPostsList = new PostsList(3);
-    this.compCasesList = new CasesList(6);
   }
 
   async render () {
@@ -49,28 +48,7 @@ class HomePage {
               ${await this.compPostsList.render('green')}
             </div>
           </div> 
-        </section> 
-        <section class="section section--blue">
-          <div class="container">
-            <header class="section__header">
-              <div class="row">
-                <div class="col-12">
-                  <h1 class="section__title">
-                  You can see,<br> <mark>cases <br>made by<br>our students</mark>
-                  </h1>
-                </div>
-                <div class="col-12">
-                  <p class="section__intro"">
-                  Ontdek de projecten die gerealiseerd zijn door onze <strong>studenten</strong>. Huisstijlen, ontwerp van gebruikersinterfaces, 2D- en 3D animaties, audiovisuele producties, websites, apps ... In onze showcase zie je werken gemaakt door <strong>talenten</strong>.
-                  </p>
-                </div>
-              </div>
-            </header>
-            <div class="section__body">
-              ${await this.compCasesList.render('blue')}
-            </div>
-          </div> 
-        </section>     
+        </section>  
       </div>
     `;
   }

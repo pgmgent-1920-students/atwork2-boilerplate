@@ -10,6 +10,8 @@ class AboutPage {
   }
 
   async afterRender () {
+    // afterRender all components on the page
+    
     // Before the rendering of the page
     return this;
   }

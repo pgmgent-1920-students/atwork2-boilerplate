@@ -1,6 +1,6 @@
 import { Router, routes } from './router';
 import {
-  HomePage, AboutPage, NotFoundPage, PostDetailPage, CasesPage, TeamPage, ContactPage, BlogPage,
+  HomePage, AboutPage, NotFoundPage, PostDetailPage, TeamPage, ContactPage, BlogPage,
 } from './pages';
 import { Footer, Header } from './components';
 
@@ -13,7 +13,6 @@ class App {
     this.pageHome = new HomePage();
     this.pageAbout = new AboutPage();
     this.pageBlog = new BlogPage();
-    this.pageCases = new CasesPage();
     this.pageContact = new ContactPage();
     this.pageNotFound = new NotFoundPage();
     this.pagePostDetail = new PostDetailPage();    
@@ -43,8 +42,7 @@ class App {
     this.router.addRoute(routes.HOME, this.pageHome);
     this.router.addRoute(routes.ABOUT, this.pageAbout);
     this.router.addRoute(routes.BLOG, this.pageBlog);
-    this.router.addRoute(routes.POST_DETAIL, this.pagePostDetail);
-    this.router.addRoute(routes.CASES, this.pageCases);    
+    this.router.addRoute(routes.POST_DETAIL, this.pagePostDetail);   
     this.router.addRoute(routes.TEAM, this.pageTeam);
     this.router.addRoute(routes.CONTACT, this.pageContact);
     this.router.setNotFoundPage(this.pageNotFound); 

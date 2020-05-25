@@ -8,6 +8,8 @@ class ContactPage {
   }
 
   async afterRender () {
+    // afterRender all components on the page
+    
     // Connect the listeners
     return this;
   }

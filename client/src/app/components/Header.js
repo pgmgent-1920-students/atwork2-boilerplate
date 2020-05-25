@@ -15,7 +15,6 @@ class Header {
                   <li class="nav__item"><a href="${routes.HOME}" data-navigo>Home</a></li>
                   <li class="nav__item"><a href="${routes.ABOUT}" data-navigo>About</a></li>
                   <li class="nav__item"><a href="${routes.BLOG}" data-navigo>Blog</a></li>
-                  <li class="nav__item"><a href="${routes.CASES}" data-navigo>Cases</a></li>
                   <li class="nav__item"><a href="${routes.TEAM}" data-navigo>Team</a></li> 
                   <li class="nav__item"><a href="${routes.CONTACT}" data-navigo>Contact</a></li>
                 </ul>
