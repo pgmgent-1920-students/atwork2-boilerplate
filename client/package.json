@@ -47,6 +47,6 @@
   "scripts": {
     "start": "webpack-dev-server --env.dev",
     "build": "webpack --env.prod",
-    "gh:pages": "rimraf ../docs/ && yarn build && cpy '**/*.*' --cwd=dist '../../docs/' --parents"
+    "gh:pages": "rimraf ../docs/ && yarn build && cpy **/*.* --cwd=dist ../../docs/ --parents"
   }
 }
