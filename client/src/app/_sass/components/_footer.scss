@@ -63,6 +63,7 @@
   }
 
   & a {
+    outline: none;
     color: darken($color: $color-white, $amount: 32);
     text-decoration: none;
 
@@ -70,6 +71,10 @@
 
     &:hover {
       color: lighten($color-blue, 10);
+    }
+
+    &.active {
+      color: $color-blue;
     }
   }
 }

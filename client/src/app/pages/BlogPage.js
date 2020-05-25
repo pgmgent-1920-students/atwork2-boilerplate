@@ -1,8 +1,8 @@
-import { PostsList } from '../components';
+import { PostsListPaged } from '../components';
 
 class BlogPage {
   constructor () {
-    this.compPostsList = new PostsList(6);
+    this.compPostsListPaged = new PostsListPaged(1);
   }
 
   async render () {
@@ -10,7 +10,7 @@ class BlogPage {
       <div class="page page--blog">
         <h1>BLOG</h1>
         <div class="container">
-          ${await this.compPostsList.render()}
+          ${await this.compPostsListPaged.render()}
         </div>  
       </div>
     `;
@@ -18,7 +18,7 @@ class BlogPage {
 
   async afterRender () {
     // afterRender all components on the page
-    this.compPostsList.afterRender();
+    this.compPostsListPaged.afterRender();
     
     // Connect the listeners
     return this;

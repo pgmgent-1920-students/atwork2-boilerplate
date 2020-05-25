@@ -1,6 +1,10 @@
 .posts-list {
   & > div {
     margin-bottom: $grid-gutter-width;
+
+    &[data-visible='false'] {
+      display: none;
+    }
   }
   
   &__item {
