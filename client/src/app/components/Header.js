@@ -19,7 +19,7 @@ class Header {
                   <li class="nav__item"><a href="${routes.CONTACT}" data-navigo>Contact</a></li>
                 </ul>
               </nav>
-              <div class="btn-hamburger"><i class="fas fa-bars"></i></div>
+              <div class="btn-hamburger">HAMB</div>
             </div>                        
           </div>
         </div>        

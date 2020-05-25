@@ -21,7 +21,7 @@ class PostsList {
           <h1 class="card__sub-title sub-title">${post.category ? post.category : 'News'}</h1>
           <h1 class="card__title title">${post.title}</h1>
           <a class="card__readmore" href="#!${routes.POST_DETAIL.replace(':id', post.id)}">Read more</a>
-        </div>
+        </div><span class="btn-sla">SLA</div>
       </div>`).join('');
   }
 
@@ -35,6 +35,8 @@ class PostsList {
 
   async afterRender () {
     // Connect the listeners
+    const slaElements = document.querySelectorAll('.btn-sla');
+    slaElements.forEach(elem => elem.addEventListener('click', ev => console.log(ev)))
     return this;
   }
 }
