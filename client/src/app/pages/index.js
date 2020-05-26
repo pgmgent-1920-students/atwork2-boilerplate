@@ -5,6 +5,7 @@ import HomePage from './HomePage';
 import NotFoundPage from './NotFoundPage';
 import PostDetailPage from './PostDetailPage';
 import TeamPage from './TeamPage';
+import ThreePage from './ThreePage';
 
 export {
   AboutPage,
@@ -14,4 +15,5 @@ export {
   NotFoundPage,
   PostDetailPage,
   TeamPage,
+  ThreePage,
 };

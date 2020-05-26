@@ -17,6 +17,7 @@ class Header {
                   <li class="nav__item"><a href="${routes.BLOG}" data-navigo>Blog</a></li>
                   <li class="nav__item"><a href="${routes.TEAM}" data-navigo>Team</a></li> 
                   <li class="nav__item"><a href="${routes.CONTACT}" data-navigo>Contact</a></li>
+                  <li class="nav__item"><a href="${routes.THREE}" data-navigo>Three</a></li>
                 </ul>
               </nav>
               <div class="btn-hamburger">HAMB</div>
